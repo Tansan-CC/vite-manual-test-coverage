@@ -7,10 +7,15 @@ export default defineConfig({
   plugins: [
     vue(),
     istanbul({
-      include: "src/*",
-      exclude: ["node_modules", "test/"],
-      extension: [".js", ".ts", ".vue"],
       requireEnv: true,
     }),
   ],
+  build: {
+    sourcemap: true,
+  },
+  server: {
+    watch: {
+      ignored: ["**/report/**", "**/raw-data/**"],
+    },
+  },
 });
