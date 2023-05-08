@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "coverage": "node report-server.js"
+    "coverage": "node report-server.mjs"
   },
   "dependencies": {
     "vue": "^3.2.47"
